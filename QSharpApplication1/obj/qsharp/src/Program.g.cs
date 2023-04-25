@@ -14,22 +14,24 @@ using Microsoft.Quantum.Intrinsic;
 using Microsoft.Quantum.Intrinsic.Interfaces;
 using Microsoft.Quantum.Simulation.Core;
 
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"SwapTest\"},\"Attributes\":[],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":7,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"q0\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":20},\"Item2\":{\"Line\":1,\"Column\":22}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"q1\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":33},\"Item2\":{\"Line\":1,\"Column\":35}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"Bool\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"SwapTest\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":7,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"SignMessage\"},\"Attributes\":[],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":24,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"message\"]},\"Type\":{\"Case\":\"Bool\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":23},\"Item2\":{\"Line\":1,\"Column\":30}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"Bool\"},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]}]},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"SignMessage\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":24,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"CheckSignature\"},\"Attributes\":[],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":42,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"message\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":26},\"Item2\":{\"Line\":1,\"Column\":33}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"publicKeys\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":45},\"Item2\":{\"Line\":1,\"Column\":55}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]}]]},\"ReturnType\":{\"Case\":\"String\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"CheckSignature\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":42,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"FormPublicKeys\"},\"Attributes\":[],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":62,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"keys\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":26},\"Item2\":{\"Line\":1,\"Column\":30}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]}]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"FormPublicKeys\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":62,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"QuantumHashing\"},\"Attributes\":[],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":72,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"input\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":26},\"Item2\":{\"Line\":1,\"Column\":31}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"QuantumHashing\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":72,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"Execute\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Core\",\"Name\":\"EntryPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":2},\"Item2\":{\"Line\":1,\"Column\":12}}]}}]},\"TypeIdRange\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":2},\"Item2\":{\"Line\":1,\"Column\":12}}]},\"Argument\":{\"Item1\":{\"Case\":\"UnitValue\"},\"Item2\":[],\"Item3\":{\"Case\":\"UnitType\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":12},\"Item2\":{\"Line\":1,\"Column\":14}}]}},\"Offset\":{\"Item1\":93,\"Item2\":4},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":94,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":18}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UnitType\"},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"Execute\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":94,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":18}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"SwapTest\"},\"Attributes\":[],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":7,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"q0\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":20},\"Item2\":{\"Line\":1,\"Column\":22}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"q1\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":33},\"Item2\":{\"Line\":1,\"Column\":35}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"Bool\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"SwapTest\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":7,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"SignMessage\"},\"Attributes\":[],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":25,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"message\"]},\"Type\":{\"Case\":\"Bool\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":23},\"Item2\":{\"Line\":1,\"Column\":30}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"Bool\"},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]}]},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"SignMessage\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":25,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"RealCheckSignature\"},\"Attributes\":[],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":74,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"message\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":30},\"Item2\":{\"Line\":1,\"Column\":37}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"publicKeys\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":49},\"Item2\":{\"Line\":1,\"Column\":59}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"String\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"RealCheckSignature\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":74,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"ConvertBoolArrayToInt\"},\"Attributes\":[],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":106,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":32}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"input\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":33},\"Item2\":{\"Line\":1,\"Column\":38}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]},\"ReturnType\":{\"Case\":\"Double\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"ConvertBoolArrayToInt\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":106,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":32}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"RealQuantumHashing\"},\"Attributes\":[],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":172,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"input\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":30},\"Item2\":{\"Line\":1,\"Column\":35}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":47},\"Item2\":{\"Line\":1,\"Column\":53}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"RealQuantumHashing\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":172,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"ConvertIntToBooleanArray\"},\"Attributes\":[],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":192,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":35}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"number\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":36},\"Item2\":{\"Line\":1,\"Column\":42}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"Int\"},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Bool\"}]},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"ConvertIntToBooleanArray\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":192,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":35}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"RealExecute\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Core\",\"Name\":\"EntryPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":2},\"Item2\":{\"Line\":1,\"Column\":12}}]}}]},\"TypeIdRange\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":2},\"Item2\":{\"Line\":1,\"Column\":12}}]},\"Argument\":{\"Item1\":{\"Case\":\"UnitValue\"},\"Item2\":[],\"Item3\":{\"Case\":\"UnitType\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":12},\"Item2\":{\"Line\":1,\"Column\":14}}]}},\"Offset\":{\"Item1\":230,\"Item2\":4},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":231,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UnitType\"},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Quantum.QSharpApplication1\",\"Name\":\"RealExecute\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\timur\\\\source\\\\repos\\\\QSharpApplication1\\\\QDS\\\\QSharpApplication1\\\\Program.qs\",\"Position\":{\"Item1\":231,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
 #line hidden
 namespace Quantum.QSharpApplication1
 {
-    [SourceLocation("C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs", OperationFunctor.Body, 8, 25)]
+    [SourceLocation("C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs", OperationFunctor.Body, 8, 26)]
     public partial class SwapTest : Operation<(IQArray<Qubit>,IQArray<Qubit>), Boolean>, ICallable
     {
         public SwapTest(IOperationFactory m) : base(m)
@@ -98,37 +100,39 @@ namespace Quantum.QSharpApplication1
         public override Func<(IQArray<Qubit>,IQArray<Qubit>), Boolean> __Body__ => (__in__) =>
         {
             var (q0,q1) = __in__;
-#line 9 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 9 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
             if (((q0.Length != q1.Length) || (q0.Length == 0L)))
             {
-#line 10 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 10 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
                 return false;
             }
 
-#line 12 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 12 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
             var result = true;
-#line 13 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 13 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
             foreach (var i in new QRange(0L, (q0.Length - 1L)))
 #line hidden
             {
 #line hidden
                 {
-#line 14 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 14 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
                     var qubit = Allocate__.Apply();
 #line hidden
                     bool __arg1__ = true;
                     try
                     {
-#line 15 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 15 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
                         Microsoft__Quantum__Intrinsic__H.Apply(qubit);
-#line 16 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 16 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
                         SWAP__.Controlled.Apply((new QArray<Qubit>(qubit), (q0[i], q1[i])));
-#line 17 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 17 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                        Microsoft__Quantum__Intrinsic__H.Apply(qubit);
+#line 18 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
                         var value = Microsoft__Quantum__Intrinsic__M.Apply(qubit);
-#line 18 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 19 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
                         if (Microsoft__Quantum__Canon__IsResultOne.Apply(value))
                         {
-#line 19 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 20 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
                             result = false;
                         }
                     }
@@ -150,7 +154,7 @@ namespace Quantum.QSharpApplication1
                 }
             }
 
-#line 22 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 23 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
             return result;
         }
 
@@ -174,7 +178,7 @@ namespace Quantum.QSharpApplication1
         }
     }
 
-    [SourceLocation("C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs", OperationFunctor.Body, 25, 43)]
+    [SourceLocation("C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs", OperationFunctor.Body, 26, 75)]
     public partial class SignMessage : Operation<Boolean, IQArray<IQArray<Boolean>>>, ICallable
     {
         public SignMessage(IOperationFactory m) : base(m)
@@ -186,36 +190,56 @@ namespace Quantum.QSharpApplication1
         public override Func<Boolean, IQArray<IQArray<Boolean>>> __Body__ => (__in__) =>
         {
             var message = __in__;
-#line 26 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var k01 = (IQArray<Boolean>)new QArray<Boolean>(true, false, false);
-#line 27 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var k02 = (IQArray<Boolean>)new QArray<Boolean>(true, false, true);
-#line 28 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var k11 = (IQArray<Boolean>)new QArray<Boolean>(true, true, false);
-#line 29 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var k12 = (IQArray<Boolean>)new QArray<Boolean>(true, true, true);
-#line 30 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 27 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var k01 = (IQArray<Boolean>)new QArray<Boolean>(false, false, false);
+#line 28 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var k02 = (IQArray<Boolean>)new QArray<Boolean>(false, false, true);
+#line 29 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var k03 = (IQArray<Boolean>)new QArray<Boolean>(false, true, false);
+#line 30 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var k04 = (IQArray<Boolean>)new QArray<Boolean>(false, true, true);
+#line 31 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var k11 = (IQArray<Boolean>)new QArray<Boolean>(true, false, false);
+#line 32 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var k12 = (IQArray<Boolean>)new QArray<Boolean>(true, false, true);
+#line 33 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var k13 = (IQArray<Boolean>)new QArray<Boolean>(true, true, false);
+#line 34 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var k14 = (IQArray<Boolean>)new QArray<Boolean>(true, true, true);
+#line 35 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
             var k0 = new QArray<Boolean>(false, false, false);
-#line 31 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 36 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
             var k1 = new QArray<Boolean>(false, false, false);
-#line 32 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 37 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var k2 = new QArray<Boolean>(false, false, false);
+#line 38 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var k3 = new QArray<Boolean>(false, false, false);
+#line 39 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
             if ((message == false))
             {
-#line 33 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 40 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
                 k0 = new QArray<Boolean>(k01);
-#line 34 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 41 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
                 k1 = new QArray<Boolean>(k02);
+#line 42 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                k2 = new QArray<Boolean>(k03);
+#line 43 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                k3 = new QArray<Boolean>(k04);
             }
             else
             {
-#line 37 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 46 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
                 k0 = new QArray<Boolean>(k11);
-#line 38 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 47 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
                 k1 = new QArray<Boolean>(k12);
+#line 48 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                k2 = new QArray<Boolean>(k13);
+#line 49 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                k3 = new QArray<Boolean>(k14);
             }
 
-#line 40 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            return new QArray<IQArray<Boolean>>(new QArray<Boolean>(message), k0?.Copy(), k1?.Copy());
+#line 51 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            return new QArray<IQArray<Boolean>>(new QArray<Boolean>(message), k0?.Copy(), k1?.Copy(), k2?.Copy(), k3?.Copy());
         }
 
         ;
@@ -231,16 +255,16 @@ namespace Quantum.QSharpApplication1
         }
     }
 
-    [SourceLocation("C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs", OperationFunctor.Body, 43, 63)]
-    public partial class CheckSignature : Operation<(IQArray<IQArray<Boolean>>,IQArray<IQArray<Qubit>>), String>, ICallable
+    [SourceLocation("C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs", OperationFunctor.Body, 75, 107)]
+    public partial class RealCheckSignature : Operation<(IQArray<IQArray<Boolean>>,IQArray<Qubit>), String>, ICallable
     {
-        public CheckSignature(IOperationFactory m) : base(m)
+        public RealCheckSignature(IOperationFactory m) : base(m)
         {
         }
 
-        public class In : QTuple<(IQArray<IQArray<Boolean>>,IQArray<IQArray<Qubit>>)>, IApplyData
+        public class In : QTuple<(IQArray<IQArray<Boolean>>,IQArray<Qubit>)>, IApplyData
         {
-            public In((IQArray<IQArray<Boolean>>,IQArray<IQArray<Qubit>>) data) : base(data)
+            public In((IQArray<IQArray<Boolean>>,IQArray<Qubit>) data) : base(data)
             {
             }
 
@@ -253,156 +277,14 @@ namespace Quantum.QSharpApplication1
             }
         }
 
-        String ICallable.Name => "CheckSignature";
-        String ICallable.FullName => "Quantum.QSharpApplication1.CheckSignature";
+        String ICallable.Name => "RealCheckSignature";
+        String ICallable.FullName => "Quantum.QSharpApplication1.RealCheckSignature";
         protected ICallable Length__
         {
             get;
             set;
         }
 
-        protected ICallable<IQArray<Boolean>, IQArray<Qubit>> QuantumHashing__
-        {
-            get;
-            set;
-        }
-
-        protected ICallable<(IQArray<Qubit>,IQArray<Qubit>), Boolean> SwapTest__
-        {
-            get;
-            set;
-        }
-
-        protected ICallable<Int64, Double> Microsoft__Quantum__Convert__IntAsDouble
-        {
-            get;
-            set;
-        }
-
-        public override Func<(IQArray<IQArray<Boolean>>,IQArray<IQArray<Qubit>>), String> __Body__ => (__in__) =>
-        {
-            var (message,publicKeys) = __in__;
-#line 44 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var s = 0L;
-#line 45 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var c1 = 0L;
-#line 46 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var c2 = 0.9D;
-#line 47 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            foreach (var i in new QRange(1L, (message.Length - 1L)))
-#line hidden
-            {
-#line 48 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                var key = (IQArray<Qubit>)QuantumHashing__.Apply(message[i]);
-#line 49 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                if (!(SwapTest__.Apply((key, publicKeys[i]))))
-                {
-#line 50 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                    s = (s + 1L);
-                }
-            }
-
-#line 53 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var result = "Valid, not transferable";
-#line 54 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            if ((s <= (c1 * 2L)))
-            {
-#line 55 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                result = "Valid, transferable";
-            }
-
-#line 57 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            if ((Microsoft__Quantum__Convert__IntAsDouble.Apply(s) >= (c2 * 2D)))
-            {
-#line 58 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                result = "Invalid";
-            }
-
-#line 60 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            return result;
-        }
-
-        ;
-        public override void __Init__()
-        {
-            this.Length__ = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Core.Length<>));
-            this.QuantumHashing__ = this.__Factory__.Get<ICallable<IQArray<Boolean>, IQArray<Qubit>>>(typeof(QuantumHashing));
-            this.SwapTest__ = this.__Factory__.Get<ICallable<(IQArray<Qubit>,IQArray<Qubit>), Boolean>>(typeof(SwapTest));
-            this.Microsoft__Quantum__Convert__IntAsDouble = this.__Factory__.Get<ICallable<Int64, Double>>(typeof(global::Microsoft.Quantum.Convert.IntAsDouble));
-        }
-
-        public override IApplyData __DataIn__((IQArray<IQArray<Boolean>>,IQArray<IQArray<Qubit>>) data) => new In(data);
-        public override IApplyData __DataOut__(String data) => new QTuple<String>(data);
-        public static System.Threading.Tasks.Task<String> Run(IOperationFactory __m__, IQArray<IQArray<Boolean>> message, IQArray<IQArray<Qubit>> publicKeys)
-        {
-            return __m__.Run<CheckSignature, (IQArray<IQArray<Boolean>>,IQArray<IQArray<Qubit>>), String>((message, publicKeys));
-        }
-    }
-
-    [SourceLocation("C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs", OperationFunctor.Body, 63, 73)]
-    public partial class FormPublicKeys : Operation<IQArray<IQArray<Boolean>>, IQArray<IQArray<Qubit>>>, ICallable
-    {
-        public FormPublicKeys(IOperationFactory m) : base(m)
-        {
-        }
-
-        String ICallable.Name => "FormPublicKeys";
-        String ICallable.FullName => "Quantum.QSharpApplication1.FormPublicKeys";
-        protected ICallable<IQArray<Boolean>, IQArray<Qubit>> QuantumHashing__
-        {
-            get;
-            set;
-        }
-
-        protected ICallable Length__
-        {
-            get;
-            set;
-        }
-
-        public override Func<IQArray<IQArray<Boolean>>, IQArray<IQArray<Qubit>>> __Body__ => (__in__) =>
-        {
-            var keys = __in__;
-#line 64 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var result = new QArray<IQArray<Qubit>>(QuantumHashing__.Apply(keys[0L]));
-#line 65 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            foreach (var i in new QRange(1L, (keys.Length - 1L)))
-#line hidden
-            {
-#line 66 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                var hash = (IQArray<Qubit>)QuantumHashing__.Apply(keys[i]);
-#line 67 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                result = QArray<IQArray<Qubit>>.Add(result, new QArray<IQArray<Qubit>>(QuantumHashing__.Apply(keys[i])));
-            }
-
-#line 69 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            return result;
-        }
-
-        ;
-        public override void __Init__()
-        {
-            this.QuantumHashing__ = this.__Factory__.Get<ICallable<IQArray<Boolean>, IQArray<Qubit>>>(typeof(QuantumHashing));
-            this.Length__ = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Core.Length<>));
-        }
-
-        public override IApplyData __DataIn__(IQArray<IQArray<Boolean>> data) => data;
-        public override IApplyData __DataOut__(IQArray<IQArray<Qubit>> data) => data;
-        public static System.Threading.Tasks.Task<IQArray<IQArray<Qubit>>> Run(IOperationFactory __m__, IQArray<IQArray<Boolean>> keys)
-        {
-            return __m__.Run<FormPublicKeys, IQArray<IQArray<Boolean>>, IQArray<IQArray<Qubit>>>(keys);
-        }
-    }
-
-    [SourceLocation("C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs", OperationFunctor.Body, 73, 95)]
-    public partial class QuantumHashing : Operation<IQArray<Boolean>, IQArray<Qubit>>, ICallable
-    {
-        public QuantumHashing(IOperationFactory m) : base(m)
-        {
-        }
-
-        String ICallable.Name => "QuantumHashing";
-        String ICallable.FullName => "Quantum.QSharpApplication1.QuantumHashing";
         protected Allocate Allocate__
         {
             get;
@@ -415,19 +297,19 @@ namespace Quantum.QSharpApplication1
             set;
         }
 
-        protected IUnitary<(Double,Qubit)> Microsoft__Quantum__Intrinsic__Rx
+        protected ICallable<(IQArray<IQArray<Boolean>>,IQArray<Qubit>), QVoid> RealQuantumHashing__
         {
             get;
             set;
         }
 
-        protected ICallable<QVoid, Double> Microsoft__Quantum__Math__PI
+        protected ICallable<(IQArray<Qubit>,IQArray<Qubit>), Boolean> SwapTest__
         {
             get;
             set;
         }
 
-        protected ICallable Length__
+        protected ICallable<IQArray<Qubit>, QVoid> ResetAll__
         {
             get;
             set;
@@ -439,78 +321,58 @@ namespace Quantum.QSharpApplication1
             set;
         }
 
-        public override Func<IQArray<Boolean>, IQArray<Qubit>> __Body__ => (__in__) =>
+        public override Func<(IQArray<IQArray<Boolean>>,IQArray<Qubit>), String> __Body__ => (__in__) =>
         {
-            var input = __in__;
+            var (message,publicKeys) = __in__;
+#line 76 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var s = 0L;
+#line 77 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var c1 = 0L;
+#line 78 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var c2 = 0.9D;
+#line 79 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var privateKeys = (IQArray<IQArray<Boolean>>)message.Slice(new QRange(1L, (message.Length - 1L)));
 #line hidden
             {
-#line 74 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                var qubit = Allocate__.Apply();
+#line 80 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                var key = Allocate__.Apply(12L);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 75 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                    var m = 0D;
-#line 76 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                    if (input[0L])
-                    {
-#line 77 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                        m = 1D;
-                    }
-
-#line 79 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                    Microsoft__Quantum__Intrinsic__Rx.Apply(((((2D * Microsoft__Quantum__Math__PI.Apply(QVoid.Instance)) * m) / 3D), qubit));
-#line 80 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                    var result = new QArray<Qubit>(qubit);
-#line 81 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                    foreach (var i in new QRange(1L, (input.Length - 1L)))
+#line 81 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    RealQuantumHashing__.Apply((privateKeys, key));
+#line 82 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    foreach (var i in new QRange(0L, (privateKeys.Length - 1L)))
 #line hidden
                     {
-#line hidden
+#line 83 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                        if (!(SwapTest__.Apply((key.Slice(new QRange((i * 3L), ((i * 3L) + 2L))), publicKeys.Slice(new QRange((i * 3L), ((i * 3L) + 2L)))))))
                         {
-#line 82 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                            var newQubit = Allocate__.Apply();
-#line hidden
-                            bool __arg2__ = true;
-                            try
-                            {
-#line 83 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                                if (input[i])
-                                {
-#line 84 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                                    m = 1D;
-                                }
-                                else
-                                {
-#line 87 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                                    m = 0D;
-                                }
-
-#line 89 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                                Microsoft__Quantum__Intrinsic__Rx.Apply((((((2D * Microsoft__Quantum__Math__PI.Apply(QVoid.Instance)) * m) * Microsoft__Quantum__Convert__IntAsDouble.Apply(i)) / 3D), newQubit));
-#line 90 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                                result = QArray<Qubit>.Add(result, new QArray<Qubit>(newQubit));
-                            }
-#line hidden
-                            catch
-                            {
-                                __arg2__ = false;
-                                throw;
-                            }
-#line hidden
-                            finally
-                            {
-                                if (__arg2__)
-                                {
-#line hidden
-                                    Release__.Apply(newQubit);
-                                }
-                            }
+#line 84 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                            s = (s + 1L);
                         }
                     }
 
-#line 92 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 87 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    ResetAll__.Apply(key);
+#line 88 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    var result = "Valid, not transferable";
+#line 89 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    if ((s <= (c1 * 2L)))
+                    {
+#line 90 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                        result = "Valid, transferable";
+                    }
+
+#line 92 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    if ((Microsoft__Quantum__Convert__IntAsDouble.Apply(s) >= (c2 * 4D)))
+                    {
+#line 93 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                        result = "Invalid";
+                    }
+
+#line 95 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
                     return result;
                 }
 #line hidden
@@ -525,7 +387,7 @@ namespace Quantum.QSharpApplication1
                     if (__arg1__)
                     {
 #line hidden
-                        Release__.Apply(qubit);
+                        Release__.Apply(key);
                     }
                 }
             }
@@ -534,32 +396,304 @@ namespace Quantum.QSharpApplication1
         ;
         public override void __Init__()
         {
+            this.Length__ = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Core.Length<>));
             this.Allocate__ = this.__Factory__.Get<Allocate>(typeof(global::Microsoft.Quantum.Intrinsic.Allocate));
             this.Release__ = this.__Factory__.Get<Release>(typeof(global::Microsoft.Quantum.Intrinsic.Release));
-            this.Microsoft__Quantum__Intrinsic__Rx = this.__Factory__.Get<IUnitary<(Double,Qubit)>>(typeof(global::Microsoft.Quantum.Intrinsic.Rx));
-            this.Microsoft__Quantum__Math__PI = this.__Factory__.Get<ICallable<QVoid, Double>>(typeof(global::Microsoft.Quantum.Math.PI));
+            this.RealQuantumHashing__ = this.__Factory__.Get<ICallable<(IQArray<IQArray<Boolean>>,IQArray<Qubit>), QVoid>>(typeof(RealQuantumHashing));
+            this.SwapTest__ = this.__Factory__.Get<ICallable<(IQArray<Qubit>,IQArray<Qubit>), Boolean>>(typeof(SwapTest));
+            this.ResetAll__ = this.__Factory__.Get<ICallable<IQArray<Qubit>, QVoid>>(typeof(global::Microsoft.Quantum.Intrinsic.ResetAll));
+            this.Microsoft__Quantum__Convert__IntAsDouble = this.__Factory__.Get<ICallable<Int64, Double>>(typeof(global::Microsoft.Quantum.Convert.IntAsDouble));
+        }
+
+        public override IApplyData __DataIn__((IQArray<IQArray<Boolean>>,IQArray<Qubit>) data) => new In(data);
+        public override IApplyData __DataOut__(String data) => new QTuple<String>(data);
+        public static System.Threading.Tasks.Task<String> Run(IOperationFactory __m__, IQArray<IQArray<Boolean>> message, IQArray<Qubit> publicKeys)
+        {
+            return __m__.Run<RealCheckSignature, (IQArray<IQArray<Boolean>>,IQArray<Qubit>), String>((message, publicKeys));
+        }
+    }
+
+    [SourceLocation("C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs", OperationFunctor.Body, 107, 173)]
+    public partial class ConvertBoolArrayToInt : Operation<IQArray<Boolean>, Double>, ICallable
+    {
+        public ConvertBoolArrayToInt(IOperationFactory m) : base(m)
+        {
+        }
+
+        String ICallable.Name => "ConvertBoolArrayToInt";
+        String ICallable.FullName => "Quantum.QSharpApplication1.ConvertBoolArrayToInt";
+        protected ICallable Length__
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<(Double,Double), Double> Microsoft__Quantum__Math__PowD
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<Int64, Double> Microsoft__Quantum__Convert__IntAsDouble
+        {
+            get;
+            set;
+        }
+
+        public override Func<IQArray<Boolean>, Double> __Body__ => (__in__) =>
+        {
+            var input = __in__;
+#line 108 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var sum = 0D;
+#line 109 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            foreach (var i in new QRange(0L, (input.Length - 1L)))
+#line hidden
+            {
+#line 110 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                var myByte = 0D;
+#line 111 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                if (input[((input.Length - 1L) - i)])
+                {
+#line 112 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    myByte = 1D;
+                }
+
+#line 114 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                sum = (sum + (myByte * Microsoft__Quantum__Math__PowD.Apply((Microsoft__Quantum__Convert__IntAsDouble.Apply(2L), Microsoft__Quantum__Convert__IntAsDouble.Apply(i)))));
+            }
+
+#line 116 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            return sum;
+        }
+
+        ;
+        public override void __Init__()
+        {
             this.Length__ = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Core.Length<>));
+            this.Microsoft__Quantum__Math__PowD = this.__Factory__.Get<ICallable<(Double,Double), Double>>(typeof(global::Microsoft.Quantum.Math.PowD));
             this.Microsoft__Quantum__Convert__IntAsDouble = this.__Factory__.Get<ICallable<Int64, Double>>(typeof(global::Microsoft.Quantum.Convert.IntAsDouble));
         }
 
         public override IApplyData __DataIn__(IQArray<Boolean> data) => data;
-        public override IApplyData __DataOut__(IQArray<Qubit> data) => data;
-        public static System.Threading.Tasks.Task<IQArray<Qubit>> Run(IOperationFactory __m__, IQArray<Boolean> input)
+        public override IApplyData __DataOut__(Double data) => new QTuple<Double>(data);
+        public static System.Threading.Tasks.Task<Double> Run(IOperationFactory __m__, IQArray<Boolean> input)
         {
-            return __m__.Run<QuantumHashing, IQArray<Boolean>, IQArray<Qubit>>(input);
+            return __m__.Run<ConvertBoolArrayToInt, IQArray<Boolean>, Double>(input);
         }
     }
 
-    [SourceLocation("C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs", OperationFunctor.Body, 95, -1)]
-    public partial class Execute : Operation<QVoid, QVoid>, ICallable
+    [SourceLocation("C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs", OperationFunctor.Body, 173, 193)]
+    public partial class RealQuantumHashing : Operation<(IQArray<IQArray<Boolean>>,IQArray<Qubit>), QVoid>, ICallable
     {
-        public Execute(IOperationFactory m) : base(m)
+        public RealQuantumHashing(IOperationFactory m) : base(m)
         {
         }
 
-        String ICallable.Name => "Execute";
-        String ICallable.FullName => "Quantum.QSharpApplication1.Execute";
-        public static EntryPointInfo<QVoid, QVoid> Info => new EntryPointInfo<QVoid, QVoid>(typeof(Execute));
+        public class In : QTuple<(IQArray<IQArray<Boolean>>,IQArray<Qubit>)>, IApplyData
+        {
+            public In((IQArray<IQArray<Boolean>>,IQArray<Qubit>) data) : base(data)
+            {
+            }
+
+            System.Collections.Generic.IEnumerable<Qubit> IApplyData.Qubits
+            {
+                get
+                {
+                    return ((IApplyData)Data.Item2)?.Qubits;
+                }
+            }
+        }
+
+        String ICallable.Name => "RealQuantumHashing";
+        String ICallable.FullName => "Quantum.QSharpApplication1.RealQuantumHashing";
+        protected IUnitary<Qubit> Microsoft__Quantum__Intrinsic__H
+        {
+            get;
+            set;
+        }
+
+        protected ICallable Length__
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<IQArray<Boolean>, Double> ConvertBoolArrayToInt__
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<(Int64,Int64), Int64> Microsoft__Quantum__Math__PowI
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<Int64, IQArray<Boolean>> ConvertIntToBooleanArray__
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<(Double,Qubit)> Microsoft__Quantum__Intrinsic__Ry
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<QVoid, Double> Microsoft__Quantum__Math__PI
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<Int64, Double> Microsoft__Quantum__Convert__IntAsDouble
+        {
+            get;
+            set;
+        }
+
+        public override Func<(IQArray<IQArray<Boolean>>,IQArray<Qubit>), QVoid> __Body__ => (__in__) =>
+        {
+            var (input,qubits) = __in__;
+#line 174 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            foreach (var qubit in qubits)
+#line hidden
+            {
+#line 175 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                Microsoft__Quantum__Intrinsic__H.Apply(qubit);
+            }
+
+#line 177 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            foreach (var l in new QRange(0L, (input.Length - 1L)))
+#line hidden
+            {
+#line 178 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                var m = ConvertBoolArrayToInt__.Apply(input[l]);
+#line 179 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                foreach (var i in new QRange(0L, (Microsoft__Quantum__Math__PowI.Apply((2L, input[l].Length)) - 1L)))
+#line hidden
+                {
+#line 180 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    var control = (IQArray<Boolean>)ConvertIntToBooleanArray__.Apply(i);
+#line 181 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    foreach (var j in new QRange(0L, ((qubits.Length / input.Length) - 1L)))
+#line hidden
+                    {
+#line 182 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                        if (control[j])
+                        {
+#line 183 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                            Microsoft__Quantum__Intrinsic__Ry.Apply((((((4D * Microsoft__Quantum__Math__PI.Apply(QVoid.Instance)) * m) * Microsoft__Quantum__Convert__IntAsDouble.Apply(i)) / 3D), qubits[(j + (l * 3L))]));
+                        }
+                    }
+                }
+            }
+
+#line 188 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            foreach (var qubit in qubits)
+#line hidden
+            {
+#line 189 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                Microsoft__Quantum__Intrinsic__H.Apply(qubit);
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override void __Init__()
+        {
+            this.Microsoft__Quantum__Intrinsic__H = this.__Factory__.Get<IUnitary<Qubit>>(typeof(global::Microsoft.Quantum.Intrinsic.H));
+            this.Length__ = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Core.Length<>));
+            this.ConvertBoolArrayToInt__ = this.__Factory__.Get<ICallable<IQArray<Boolean>, Double>>(typeof(ConvertBoolArrayToInt));
+            this.Microsoft__Quantum__Math__PowI = this.__Factory__.Get<ICallable<(Int64,Int64), Int64>>(typeof(global::Microsoft.Quantum.Math.PowI));
+            this.ConvertIntToBooleanArray__ = this.__Factory__.Get<ICallable<Int64, IQArray<Boolean>>>(typeof(ConvertIntToBooleanArray));
+            this.Microsoft__Quantum__Intrinsic__Ry = this.__Factory__.Get<IUnitary<(Double,Qubit)>>(typeof(global::Microsoft.Quantum.Intrinsic.Ry));
+            this.Microsoft__Quantum__Math__PI = this.__Factory__.Get<ICallable<QVoid, Double>>(typeof(global::Microsoft.Quantum.Math.PI));
+            this.Microsoft__Quantum__Convert__IntAsDouble = this.__Factory__.Get<ICallable<Int64, Double>>(typeof(global::Microsoft.Quantum.Convert.IntAsDouble));
+        }
+
+        public override IApplyData __DataIn__((IQArray<IQArray<Boolean>>,IQArray<Qubit>) data) => new In(data);
+        public override IApplyData __DataOut__(QVoid data) => data;
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, IQArray<IQArray<Boolean>> input, IQArray<Qubit> qubits)
+        {
+            return __m__.Run<RealQuantumHashing, (IQArray<IQArray<Boolean>>,IQArray<Qubit>), QVoid>((input, qubits));
+        }
+    }
+
+    [SourceLocation("C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs", OperationFunctor.Body, 193, 232)]
+    public partial class ConvertIntToBooleanArray : Operation<Int64, IQArray<Boolean>>, ICallable
+    {
+        public ConvertIntToBooleanArray(IOperationFactory m) : base(m)
+        {
+        }
+
+        String ICallable.Name => "ConvertIntToBooleanArray";
+        String ICallable.FullName => "Quantum.QSharpApplication1.ConvertIntToBooleanArray";
+        public override Func<Int64, IQArray<Boolean>> __Body__ => (__in__) =>
+        {
+            var number = __in__;
+#line 194 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var result = new QArray<Boolean>(false, false, false);
+#line 195 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var num = number;
+#line 196 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            var index = 2L;
+#line 197 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            while (true)
+            {
+#line 198 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                var x = (num % 2L);
+#line 199 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                if ((x == 1L))
+                {
+#line 200 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    result.Modify(index, true);
+                }
+
+#line 202 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                index = (index - 1L);
+#line 203 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                num = (num / 2L);
+                if ((index < 0L))
+                {
+                    break;
+                }
+                else
+                {
+                }
+            }
+
+#line 206 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+            return result;
+        }
+
+        ;
+        public override void __Init__()
+        {
+        }
+
+        public override IApplyData __DataIn__(Int64 data) => new QTuple<Int64>(data);
+        public override IApplyData __DataOut__(IQArray<Boolean> data) => data;
+        public static System.Threading.Tasks.Task<IQArray<Boolean>> Run(IOperationFactory __m__, Int64 number)
+        {
+            return __m__.Run<ConvertIntToBooleanArray, Int64, IQArray<Boolean>>(number);
+        }
+    }
+
+    [SourceLocation("C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs", OperationFunctor.Body, 232, -1)]
+    public partial class RealExecute : Operation<QVoid, QVoid>, ICallable
+    {
+        public RealExecute(IOperationFactory m) : base(m)
+        {
+        }
+
+        String ICallable.Name => "RealExecute";
+        String ICallable.FullName => "Quantum.QSharpApplication1.RealExecute";
+        public static EntryPointInfo<QVoid, QVoid> Info => new EntryPointInfo<QVoid, QVoid>(typeof(RealExecute));
         protected ICallable<Boolean, IQArray<IQArray<Boolean>>> SignMessage__
         {
             get;
@@ -572,19 +706,25 @@ namespace Quantum.QSharpApplication1
             set;
         }
 
-        protected ICallable<IQArray<IQArray<Boolean>>, IQArray<IQArray<Qubit>>> FormPublicKeys__
+        protected Allocate Allocate__
         {
             get;
             set;
         }
 
-        protected ICallable<(IQArray<IQArray<Boolean>>,IQArray<IQArray<Qubit>>), String> CheckSignature__
+        protected Release Release__
         {
             get;
             set;
         }
 
-        protected ICallable<IQArray<Qubit>, QVoid> ResetAll__
+        protected ICallable<(IQArray<IQArray<Boolean>>,IQArray<Qubit>), QVoid> RealQuantumHashing__
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<(IQArray<IQArray<Boolean>>,IQArray<Qubit>), String> RealCheckSignature__
         {
             get;
             set;
@@ -596,46 +736,93 @@ namespace Quantum.QSharpApplication1
             set;
         }
 
+        protected ICallable<IQArray<Qubit>, QVoid> ResetAll__
+        {
+            get;
+            set;
+        }
+
         public override Func<QVoid, QVoid> __Body__ => (__in__) =>
         {
-#line 96 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 233 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
             var message = false;
-#line 97 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 234 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
             var singnedMessage = (IQArray<IQArray<Boolean>>)SignMessage__.Apply(message);
-#line 98 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
+#line 235 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
             var privateKeys = (IQArray<IQArray<Boolean>>)singnedMessage.Slice(new QRange(1L, (singnedMessage.Length - 1L)));
-#line 99 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var publicKeys = (IQArray<IQArray<Qubit>>)FormPublicKeys__.Apply(privateKeys);
-#line 100 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var result = CheckSignature__.Apply((singnedMessage, publicKeys));
-#line 101 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            foreach (var i in new QRange(0L, publicKeys.Length))
 #line hidden
             {
-#line 102 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                ResetAll__.Apply(publicKeys[i]);
-            }
-
-#line 104 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var message1 = true;
-#line 105 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var singnedMessage1 = (IQArray<IQArray<Boolean>>)SignMessage__.Apply(message);
-#line 106 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var privateKeys1 = (IQArray<IQArray<Boolean>>)singnedMessage.Slice(new QRange(1L, (singnedMessage.Length - 1L)));
-#line 107 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var publicKeys1 = (IQArray<IQArray<Qubit>>)FormPublicKeys__.Apply(privateKeys);
-#line 108 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            var result1 = CheckSignature__.Apply((singnedMessage, publicKeys));
-#line 109 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            foreach (var i in new QRange(0L, publicKeys.Length))
+#line 236 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                var publicKeys = Allocate__.Apply((3L * privateKeys.Length));
 #line hidden
-            {
-#line 110 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-                ResetAll__.Apply(publicKeys[i]);
+                bool __arg1__ = true;
+                try
+                {
+#line 237 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    RealQuantumHashing__.Apply((privateKeys, publicKeys));
+#line 238 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    var result = RealCheckSignature__.Apply((singnedMessage, publicKeys));
+#line 239 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    Message__.Apply(result);
+#line 240 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    ResetAll__.Apply(publicKeys);
+#line 241 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    var message2 = false;
+#line 242 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    var singnedMessage2 = (IQArray<IQArray<Boolean>>)SignMessage__.Apply(message2);
+#line 243 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                    var privateKeys2 = (IQArray<IQArray<Boolean>>)singnedMessage2.Slice(new QRange(1L, (singnedMessage2.Length - 1L)));
+#line hidden
+                    {
+#line 244 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                        var publicKeys2 = Allocate__.Apply((3L * privateKeys2.Length));
+#line hidden
+                        bool __arg2__ = true;
+                        try
+                        {
+#line 245 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                            RealQuantumHashing__.Apply((privateKeys2, publicKeys2));
+#line 246 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                            var result2 = RealCheckSignature__.Apply((singnedMessage2, publicKeys2));
+#line 247 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                            Message__.Apply(result2);
+#line 248 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QDS\\QSharpApplication1\\Program.qs"
+                            ResetAll__.Apply(publicKeys2);
+                        }
+#line hidden
+                        catch
+                        {
+                            __arg2__ = false;
+                            throw;
+                        }
+#line hidden
+                        finally
+                        {
+                            if (__arg2__)
+                            {
+#line hidden
+                                Release__.Apply(publicKeys2);
+                            }
+                        }
+                    }
+                }
+#line hidden
+                catch
+                {
+                    __arg1__ = false;
+                    throw;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__)
+                    {
+#line hidden
+                        Release__.Apply(publicKeys);
+                    }
+                }
             }
 
-#line 112 "C:\\Users\\timur\\source\\repos\\QSharpApplication1\\QSharpApplication1\\Program.qs"
-            Message__.Apply(result1);
 #line hidden
             return QVoid.Instance;
         }
@@ -645,17 +832,19 @@ namespace Quantum.QSharpApplication1
         {
             this.SignMessage__ = this.__Factory__.Get<ICallable<Boolean, IQArray<IQArray<Boolean>>>>(typeof(SignMessage));
             this.Length__ = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Core.Length<>));
-            this.FormPublicKeys__ = this.__Factory__.Get<ICallable<IQArray<IQArray<Boolean>>, IQArray<IQArray<Qubit>>>>(typeof(FormPublicKeys));
-            this.CheckSignature__ = this.__Factory__.Get<ICallable<(IQArray<IQArray<Boolean>>,IQArray<IQArray<Qubit>>), String>>(typeof(CheckSignature));
-            this.ResetAll__ = this.__Factory__.Get<ICallable<IQArray<Qubit>, QVoid>>(typeof(global::Microsoft.Quantum.Intrinsic.ResetAll));
+            this.Allocate__ = this.__Factory__.Get<Allocate>(typeof(global::Microsoft.Quantum.Intrinsic.Allocate));
+            this.Release__ = this.__Factory__.Get<Release>(typeof(global::Microsoft.Quantum.Intrinsic.Release));
+            this.RealQuantumHashing__ = this.__Factory__.Get<ICallable<(IQArray<IQArray<Boolean>>,IQArray<Qubit>), QVoid>>(typeof(RealQuantumHashing));
+            this.RealCheckSignature__ = this.__Factory__.Get<ICallable<(IQArray<IQArray<Boolean>>,IQArray<Qubit>), String>>(typeof(RealCheckSignature));
             this.Message__ = this.__Factory__.Get<ICallable<String, QVoid>>(typeof(global::Microsoft.Quantum.Intrinsic.Message));
+            this.ResetAll__ = this.__Factory__.Get<ICallable<IQArray<Qubit>, QVoid>>(typeof(global::Microsoft.Quantum.Intrinsic.ResetAll));
         }
 
         public override IApplyData __DataIn__(QVoid data) => data;
         public override IApplyData __DataOut__(QVoid data) => data;
         public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__)
         {
-            return __m__.Run<Execute, QVoid, QVoid>(QVoid.Instance);
+            return __m__.Run<RealExecute, QVoid, QVoid>(QVoid.Instance);
         }
     }
 }

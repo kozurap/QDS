@@ -1,10 +1,10 @@
 --proj
-    "C:\Users\timur\source\repos\QSharpApplication1\QSharpApplication1\QSharpApplication1"
+    "C:\Users\timur\source\repos\QSharpApplication1\QDS\QSharpApplication1\QSharpApplication1"
 --build-exe
 --input
-    "C:\Users\timur\source\repos\QSharpApplication1\QSharpApplication1\Program.qs"
+    "C:\Users\timur\source\repos\QSharpApplication1\QDS\QSharpApplication1\Program.qs"
 --output
-    "C:/Users/timur/source/repos/QSharpApplication1/QSharpApplication1/obj/qsharp/"
+    "C:/Users/timur/source/repos/QSharpApplication1/QDS/QSharpApplication1/obj/qsharp/"
 --references
     "C:\Users\timur\.nuget\packages\azure.core\1.25.0\lib\net5.0\Azure.Core.dll"
     "C:\Users\timur\.nuget\packages\azure.identity\1.5.0\lib\netstandard2.0\Azure.Identity.dll"
@@ -42,7 +42,7 @@
     FullComputation
 --skip-monomorphization
 --package-load-fallback-folders
-    "C:/Users/timur/source/repos/QSharpApplication1/QSharpApplication1/bin/Debug/net6.0/"
+    "C:/Users/timur/source/repos/QSharpApplication1/QDS/QSharpApplication1/bin/Debug/net6.0/"
 --assembly-properties
     DocsPackageId:QSharpApplication1
     ExecutionTarget:Any
