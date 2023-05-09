@@ -23,86 +23,57 @@
         return result;
     }
 
-    operation SignMessage(message: Bool): Bool[][] {
-        let k01 = [false, false, false];
-        let k02 = [false, false, true];
-        let k03 = [false, true, false];
-        let k04 = [false, true, true];
-        let k11 = [true, false, false];
-        let k12 = [true, false, true];
-        let k13 = [true, true, false];
-        let k14 = [true, true, true];
-        mutable k0 = [false, false, false];
-        mutable k1 = [false, false, false];
-        mutable k2 = [false, false, false];
-        mutable k3 = [false, false, false];
-        if(message == false){
-            set k0 = k01;
-            set k1 = k02;
-            set k2 = k03;
-            set k3 = k04;
+    operation SignMessage(message: Int, system: Int, lengthOfWord: Int, count: Int): Int[][] {
+        let keys = MakeAllPossibleArraysOfGivenSystemAndLength(system, lengthOfWord);
+        if(count*2<Length(keys) or (message!=0 and message!=1)){
+            return [[0]];
         }
-        else { 
-            set k0 = k11;
-            set k1 = k12;
-            set k2 = k13;
-            set k3 = k14;
+        if(message == 0){
+            return keys[0 .. count - 1];
         }
-        return [[message], k0, k1, k2, k3];
+        return keys[count .. count * 2 - 1];
     }
 
-    operation CheckSignature(message: Bool[][], publicKeys: Qubit[][]) : String {
-        mutable s = 0;
-        let c1=0;
-        let c2= 0.9;
-        for i in 1 .. Length(message)-1{
-            let key = QuantumHashing(message[i]);
-            if(!SwapTest(key, publicKeys[i])){
-                set s += 1;
+    operation MakeAllPossibleArraysOfGivenSystemAndLength(system: Int, length: Int): Int[][]{
+        mutable result = [[0, size = length], size = PowI(2, length)];
+        for i in 0 .. PowI(2, length)-1{
+            for j in 0 .. i{
+                for n in 0 .. length - 1{
+                    if (result[j][length - n - 1] < system -1){
+                        mutable tmp = result[j];
+                        set tmp w/= length - n - 1 <- +1;
+                        set result w/= j <- tmp;
+                    }
+                }
             }
-        }
-        mutable result = "Valid, not transferable";
-        if(s <= c1 * 2){
-            set result = "Valid, transferable";
-        }
-        if(Convert.IntAsDouble(s) >= c2 * 2.0){
-            set result = "Invalid";
         }
         return result;
     }
 
 
-    operation RealCheckSignature(message: Bool[][], publicKeys: Qubit[]): String{
+
+    operation RealCheckSignature(privateKeys: Int[][], publicKeys: Qubit[] , system:Int, lgt1 : Int): Int{
         mutable s = 0;
         let c1=0;
         let c2= 0.9;
-        let privateKeys = message[1 .. Length(message)- 1];
         use key = Qubit[12];
-            RealQuantumHashing(privateKeys, key);
+            RealQuantumHashing(privateKeys, system, key, lgt1);
         for i in 0 .. Length(privateKeys)-1{
             if(!SwapTest(key[i*3 .. (i*3)+2], publicKeys[i*3 .. (i*3)+2])){
                 set s += 1;
             }
         }
         ResetAll(key);
-        mutable result = "Valid, not transferable";
+        mutable result = 0;
         if(s <= c1 * 2){
-            set result = "Valid, transferable";
+            set result = 1;
         }
         if(Convert.IntAsDouble(s) >= c2 * 4.0){
-            set result = "Invalid";
+            set result = -1;
         }
         return result;
     }
 
-    operation FormPublicKeys(keys: Bool[][]): Qubit[][] {
-        mutable result = [QuantumHashing(keys[0])];
-        for i in 1 .. Length(keys) - 1{
-            let hash = QuantumHashing(keys[i]);
-            set result += [QuantumHashing(keys[i])];
-        }
-        return result;
-    }
 
     operation ConvertBoolArrayToInt(input: Bool[]) : Double{
         mutable sum = 0.0;
@@ -118,80 +89,69 @@
 
 
 
-    operation QuantumHashing(input: Bool[]): Qubit[]{
-        use qubit = Qubit();
-        let m = ConvertBoolArrayToInt(input);
-        Ry(((2.0*PI()*m) * 0.0)/3.0, qubit);
-        mutable result = [qubit];
-        for i in 1 .. Length(input) - 1{
-            use newQubit = Qubit();
-            Ry((2.0*PI()*m * Convert.IntAsDouble(i))/3.0, newQubit);
-            set result += [newQubit];
+
+
+
+    
+
+
+    operation RealQuantumHashing(originalInput: Int[][], system: Int, qubits:Qubit[], lgt1:Int): Unit{
+        for k in 0 .. Length(originalInput){
+        let q0 = qubits[k*lgt1];
+        let q = qubits[k*lgt1+1 .. k * lgt1 + lgt1 -1];
+        for qubit in qubits{
+           H(qubit);
+        }    
+        let input = originalInput[k];
+            let m = ConvertFromAnySystemToDeca(input, system);
+            for i in 0 .. PowI(system, Length(input))-1{
+                let temp = ConvertOneNumberFromAnySystemToDeca(i, system);
+                let control = ConvertFromDecaToBooleanArray(temp, system);
+                (ControlledOnBitString(control, Ry((4.0*PI()*m * Convert.IntAsDouble(i))/3.0, _)))(q,q0);
+            }
+        }
+        for qubit in qubits{
+            H(qubit);
+        }
+    }
+
+    function ConvertFromAnySystemToDeca(input: Int[], system: Int) : Double{
+        mutable sum = 0.0;
+        for i in 0 .. Length(input)-1{
+            set sum += Convert.IntAsDouble(input[input[Length(input) - 1 - i]]) * PowD(Convert.IntAsDouble(system), Convert.IntAsDouble(i));
+        }
+        return sum;
+    }
+
+    function ConvertOneNumberFromAnySystemToDeca(input: Int, system: Int) : Int{
+        mutable sum = 0;
+        mutable x = input;
+        mutable i = 0;
+        while(x!=0){
+            let tmp = x % system;
+            set sum += x * PowI(system, i);
+            set x /= 2;
+            set i +=1;
+        }
+        return sum;
+    }
+
+    function ConvertFromDecaToBooleanArray(input: Int, initialSystem: Int) : Bool[]{
+        mutable result = [false, size = Ceiling(Lg(Convert.IntAsDouble(initialSystem)))];
+        mutable x = input;
+        mutable i = 0;
+        while(x>0) {
+            if(x % 2 == 1){
+                set result w/= Length(result) - i - 1 <- true;
+            }
+            set x = x / 2;
+            set i += 1;
         }
         return result;
     }
 
-
-    operation QuantumHashing2(input: Bool[]): Qubit[]{
-       use qubits = Qubit[3];
-       for qubit in qubits{
-           H(qubit);
-       }
-       let m = ConvertBoolArrayToInt(input);
-       for i in 0 .. PowI(2, Length(input)-1){
-           let control = ConvertIntToBooleanArray(i);
-           for j in 0 .. Length(qubits)-1{
-               if(control[j]){
-                   Ry((4.0*PI()*m * Convert.IntAsDouble(i))/3.0, qubits[j]);
-               }
-           }
-       }
-       for qubit in qubits{
-           H(qubit);
-       }
-       return qubits;
-    }
-
-    operation QuantumHashingForForOneInput(input: Bool[], qubits:Qubit[]) : Unit{
-         for qubit in qubits{
-           H(qubit);
-       }
-       let m = ConvertBoolArrayToInt(input);
-       for i in 0 .. PowI(2, Length(input)-1){
-           let control = ConvertIntToBooleanArray(i);
-           for j in 0 .. Length(qubits)-1{
-               if(control[j]){
-                   Ry((4.0*PI()*m * Convert.IntAsDouble(i))/3.0, qubits[j]);
-               }
-           }
-       }
-       for qubit in qubits{
-           H(qubit);
-       }
-    }
-
-    operation RealQuantumHashing(input: Bool[][], qubits:Qubit[]): Unit{
-         for qubit in qubits{
-           H(qubit);
-       }
-       for l in 0.. Length(input)-1{
-           let m = ConvertBoolArrayToInt(input[l]);
-           for i in 0 .. PowI(2, Length(input[l]))-1{
-               let control = ConvertIntToBooleanArray(i);
-               for j in 0 .. (Length(qubits)/Length(input) -1){
-                   if(control[j]){
-                       Ry((4.0*PI()*m * Convert.IntAsDouble(i))/3.0, qubits[j+(l*3)]);
-                   }
-               }
-           }
-       }
-       for qubit in qubits{
-           H(qubit);
-       }
-    }
-
-    operation ConvertIntToBooleanArray(number: Int): Bool[]{
-        mutable result = [false, false, false];
+    operation ConvertIntToBooleanArray(number: Int, system: Int): Bool[]{
+        mutable result = [false];
         mutable num = number;
         mutable index = 2;
         repeat{
@@ -206,45 +166,133 @@
         return result;
     }
 
-   
-    operation Execute(): Unit{
-        let message = false;
-        let singnedMessage = SignMessage(message);
-        let privateKeys = singnedMessage[1 .. Length(singnedMessage)- 1];
-        let publicKeys = FormPublicKeys(privateKeys);
-        let result = CheckSignature(singnedMessage, publicKeys);
-        Message(result);
-        for i in 0 .. Length(publicKeys){
-            ResetAll(publicKeys[i]);
-        }
-        let message1 = true;
-        let singnedMessage1 = SignMessage(message);
-        let privateKeys1 = singnedMessage[1 .. Length(singnedMessage)- 1];
-        let publicKeys1 = FormPublicKeys(privateKeys);
-        let result1 = CheckSignature(singnedMessage, publicKeys);
-        for i in 0 .. Length(publicKeys){
-            ResetAll(publicKeys[i]);
-        }
-        Message(result1);
+     operation QuantumRandomNumberGenerator() : Result {
+        // Allocate a qubit        
+        use q = Qubit();  
+        // Put the qubit to superposition
+        // It now has a 50% chance of being measured 0 or 1  
+        H(q);      
+        // Measure the qubit value            
+        return M(q); 
     }
 
+    operation BB84(count: Int): Int[]{        
+        use qubits = Qubit[count];
+        for i in 0 .. 15{
+            let bit = QuantumRandomNumberGenerator();
+            if IsResultOne(bit) {
+                X(qubits[i]);
+            }
+        }
+
+        mutable b = [0, size = count];
+        for i in 0 .. count - 1{
+            let tmp = QuantumRandomNumberGenerator();
+            if(IsResultOne(tmp)){
+                set b w/= i <- 1;
+            }
+        }
+
+        for i in 0 .. count - 1{
+            let _base = b[i];
+            if _base == 1 {
+                H(qubits[i]);
+            }
+        }        
+
+
+        // Alice send qubits to Bob
+        // ...
+        // Bob receives qubits
+
+
+        mutable c = [0, size = count];
+        for i in 0 .. count - 1{
+            let tmp = QuantumRandomNumberGenerator();
+            if(IsResultOne(tmp)){
+                set c w/= i <- 1;
+            }
+        }
+
+        for i in 0 .. count - 1{
+            let _base = c[i];
+            if _base == 1 {
+                H(qubits[i]);
+            }
+        }
+
+
+        mutable shared_secret = [];
+        for i in 0 .. count - 1{
+            if c[i] == b[i] {
+                let misure = M(qubits[i]);
+                mutable x = 0;
+                if misure == One {
+                    set x = 1;
+                }
+                set shared_secret = shared_secret + [x]; 
+            }
+        }   
+
+
+        for i in 0 .. count - 1{
+            Reset(qubits[i]);
+        }
+        
+        return shared_secret;
+    }
+
+
     @EntryPoint()
-    operation RealExecute(): Unit{
-        let message = false;
-        let singnedMessage = SignMessage(message);
-        let privateKeys = singnedMessage[1 .. Length(singnedMessage)- 1];
-        use publicKeys = Qubit[3*Length(privateKeys)];
-        RealQuantumHashing(privateKeys, publicKeys);
-        let result = RealCheckSignature(singnedMessage, publicKeys);
-        Message(result);
-        ResetAll(publicKeys);
-        let message2 = false;
-        let singnedMessage2 = SignMessage(message2);
-        let privateKeys2 = singnedMessage2[1 .. Length(singnedMessage2)- 1];
-        use publicKeys2 = Qubit[3*Length(privateKeys2)];
-        RealQuantumHashing(privateKeys2, publicKeys2);
-        let result2 = RealCheckSignature(singnedMessage2, publicKeys2);
-        Message(result2);
-        ResetAll(publicKeys2);
+    operation RealExecute(system: Int, lengthOfWord: Int, countOfWords: Int, countOfQubitsForBB84: Int): Unit{
+        let messages = BB84(countOfQubitsForBB84);
+        //Asymmetric
+        mutable results = [];
+        for message in messages{
+            let privateKeys = SignMessage(message, system, lengthOfWord, countOfWords);
+            let t = Log(Convert.IntAsDouble(2 * PowI(lengthOfWord, 2))) * (Convert.IntAsDouble(2)/PowD(0.9, Convert.IntAsDouble(2)));
+            let lgt1 = Ceiling(Lg(t)) + 1;
+            use publicKeys = Qubit[lgt1 * Length(privateKeys)];
+            RealQuantumHashing(privateKeys, system, publicKeys, lgt1);
+            let result = RealCheckSignature(privateKeys, publicKeys, system, lgt1);
+            set results = results + [result];
+            ResetAll(publicKeys);
+        }
+        mutable isTrasferable = true;
+        mutable isValid = true;
+        for res in results{
+            if(res == -1){
+                set isValid = false;
+            }
+            elif(res == 0){
+                set isTrasferable = false;
+            }
+        }
+        if(!isValid){
+            Message("Invalid");
+        }
+        elif(!isTrasferable){
+            Message("Valid, not transferable");
+        }
+        else{
+            Message("Valid, transferable");
+        }
+
+        //Symmetric
+        let tt = Log(Convert.IntAsDouble(2 * PowI(lengthOfWord, 2))) * (Convert.IntAsDouble(2)/PowD(0.9, Convert.IntAsDouble(2)));
+        let lgtt1 = Ceiling(Lg(tt)) + 1;
+        use privateKey = Qubit[lgtt1];
+        let m = [messages];
+        RealQuantumHashing(m, 2, privateKey, lgtt1);
+        let result = RealCheckSignature(m, privateKey, 2, lgtt1);
+        if(result == -1){
+             Message("Invalid");
+        }
+        elif(result == 0){
+            Message("Valid, not transferable");
+        }
+        else{
+            Message("Valid, transferable");
+        }
     }
 }

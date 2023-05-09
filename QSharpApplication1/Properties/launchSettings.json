@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "QSharpApplication1": {
+      "commandName": "Project",
+      "commandLineArgs": "--system 8\r\n--length-of-word 8\r\n--count-of-words 4\r\n--count-of-qubits-for-bb84 16"
+    }
+  }
+}
