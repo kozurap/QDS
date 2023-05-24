@@ -249,10 +249,9 @@
     }
 
 
-    @EntryPoint()
+    
     operation RealExecute(system: Int, lengthOfWord: Int, countOfWords: Int, countOfQubitsForBB84: Int): Unit{
         let messages = BB84(countOfQubitsForBB84);
-        //Asymmetric
         mutable results = [];
         for message in messages{
             let privateKeys = SignMessage(message, system, lengthOfWord, countOfWords);
@@ -284,7 +283,6 @@
             Message("Valid, transferable");
         }
 
-        //Symmetric
         let tt = Log(Convert.IntAsDouble(2 * PowI(2, Length(messages)))) * (Convert.IntAsDouble(2)/PowD(0.9, Convert.IntAsDouble(2)));
         let lgtt1 = Ceiling(Lg(tt)) + 1;
         use privateKey = Qubit[lgtt1];
@@ -301,5 +299,89 @@
             Message("Valid, transferable");
         }
         ResetAll(privateKey);
+    }
+
+    @EntryPoint()
+    operation Execute(system: Int, lengthOfWord: Int, countOfWords: Int, countOfQubitsForBB84: Int): Unit{
+        let messages = BB84(countOfQubitsForBB84);
+        //AsymmetricProtocol(messages, system, lengthOfWord, countOfWords);
+        SymmetricProtocol(messages, 2);
+    }
+
+    operation AsymmetricProtocol(messages: Int[], system: Int, lengthOfWord: Int, countOfWords: Int): Unit{
+        mutable results = [];
+        for message in messages{
+            let privateKeys = SignMessage(message, system, lengthOfWord, countOfWords);
+            let t = Log(Convert.IntAsDouble(2 * PowI(system, lengthOfWord))) * (Convert.IntAsDouble(2)/PowD(0.9, Convert.IntAsDouble(2)));
+            let lgt1 = Ceiling(Lg(t)) + 1;
+            use publicKeys = Qubit[lgt1 * Length(privateKeys)];
+            RealQuantumHashing(privateKeys, system, publicKeys, lgt1);
+            let result = RealCheckSignature(privateKeys, publicKeys, system, lgt1);
+            set results = results + [result];
+            ResetAll(publicKeys);
+        }
+        mutable isTrasferable = true;
+        mutable isValid = true;
+        for res in results{
+            if(res == -1){
+                set isValid = false;
+            }
+            elif(res == 0){
+                set isTrasferable = false;
+            }
+        }
+        if(!isValid){
+            Message("Invalid");
+        }
+        elif(!isTrasferable){
+            Message("Valid, not transferable");
+        }
+        else{
+            Message("Valid, transferable");
+        }
+    }
+
+    operation SymmetricProtocol(messages: Int[], countOfHashes: Int): Unit{
+        let bitsPerOneHash = Ceiling(Convert.IntAsDouble(Length(messages))/Convert.IntAsDouble(countOfHashes));
+        mutable bitPointer0 = 0;
+        mutable bitPointer1 = bitsPerOneHash - 1;
+        mutable results = [];
+        for i in 0 .. Length(messages)/bitsPerOneHash{
+            let message = messages[bitPointer0 .. bitPointer1];
+            let tt = Log(Convert.IntAsDouble(2 * PowI(2, Length(message)))) * (Convert.IntAsDouble(2)/PowD(0.9, Convert.IntAsDouble(2)));
+            let lgtt1 = Ceiling(Lg(tt)) + 1;
+            use privateKey = Qubit[lgtt1];
+            let m = [message];
+            RealQuantumHashing(m, 2, privateKey, lgtt1);
+            let res = RealCheckSignature(m, privateKey, 2, lgtt1);
+            set results = results + [res];
+            ResetAll(privateKey);
+            set bitPointer0 = bitPointer1;
+            if(bitPointer1 + bitsPerOneHash <= Length(messages)-1){
+                set bitPointer1 = bitPointer1 + bitsPerOneHash;
+            }
+            else{
+                set bitPointer1 = Length(messages) - 1;
+            }
+        }
+        mutable isTrasferable = true;
+        mutable isValid = true;
+        for res in results{
+            if(res == -1){
+                set isValid = false;
+            }
+            elif(res == 0){
+                set isTrasferable = false;
+            }
+        }
+        if(!isValid){
+            Message("Invalid");
+        }
+        elif(!isTrasferable){
+            Message("Valid, not transferable");
+        }
+        else{
+            Message("Valid, transferable");
+        }
     }
 }
